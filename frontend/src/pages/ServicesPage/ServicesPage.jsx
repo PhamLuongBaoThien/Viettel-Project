@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs, Card, Button, Tag, Badge } from 'antd';
 import { ShoppingCartOutlined, ThunderboltFilled, WifiOutlined, MobileOutlined } from '@ant-design/icons';
-import { mobilePlans, internetPlans, deviceProducts } from '../../services/mockServices';
+// import { mobilePlans, internetPlans, deviceProducts } from '../../services/mockServices';
 
 const ServicesPage = () => {
   
