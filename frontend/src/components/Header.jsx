@@ -1,13 +1,13 @@
 import { Layout, Menu, Button } from "antd"
 import { PhoneOutlined } from "@ant-design/icons"
-
+import { Link } from "react-router-dom";
 const { Header: AntHeader } = Layout
 
 const Header = () => {
   const menuItems = [
     { key: "home", label: "Trang chủ" },
     { key: "solutions", label: "Giải pháp" },
-    { key: "services", label: "Dịch vụ" },
+    { label: <Link to="/dich-vu">Dịch vụ</Link>, key: '/dich-vu' },
     { key: "products", label: "Sản phẩm" },
     { key: "contact", label: "Liên hệ" },
   ]
