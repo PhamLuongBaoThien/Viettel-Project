@@ -37,7 +37,7 @@ const ServicesPage = () => {
             size="large" 
             className="w-full bg-[#E60000] hover:!bg-red-700 font-bold h-12 rounded-lg shadow-md"
           >
-            Đăng ký ngay
+            Đăng ký ngay đi bạn
           </Button>
         </Card>
       </Badge.Ribbon>
