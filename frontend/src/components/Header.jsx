@@ -6,7 +6,7 @@ const { Header: AntHeader } = Layout
 const Header = () => {
   const menuItems = [
     { key: "home", label: <Link to="/">Trang chủ</Link> },
-    { key: "solutions", label: "Giải pháp" },
+    { key: "solutions", label:  <Link to="/solutions">Giải pháp</Link>},
     { label: <Link to="/dich-vu">Dịch vụ</Link>, key: '/dich-vu' },
     { key: "products", label: "Sản phẩm" },
     { key: "contact", label: "Liên hệ" },
