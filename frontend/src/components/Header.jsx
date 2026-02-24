@@ -1,26 +1,33 @@
 import { Layout, Menu, Button } from "antd"
 import { PhoneOutlined } from "@ant-design/icons"
 import { Link } from "react-router-dom";
+import logoPath from "../assets/logo/viettel-telecom.png";
+ 
 const { Header: AntHeader } = Layout
 
 const Header = () => {
+
   const menuItems = [
     { key: "home", label: <Link to="/">Trang chủ</Link> },
     { key: "solutions", label:  <Link to="/solutions">Giải pháp</Link>},
     { label: <Link to="/dich-vu">Dịch vụ</Link>, key: '/dich-vu' },
-    { key: "products", label: "Sản phẩm" },
     { key: "contact", label: "Liên hệ" },
   ]
 
   return (
-    <AntHeader className="fixed w-full z-50 bg-white border-b border-gray-100 px-4 md:px-12 flex items-center justify-between h-16 shadow-sm">
+    <AntHeader className="sticky top-0 w-full z-50 bg-white border-b border-gray-100 px-4 md:px-12 flex items-center justify-between h-16 shadow-sm">
       <div className="flex items-center gap-8">
-        <div className="flex items-center">
-          <div className="w-10 h-10 bg-[#E60000] rounded-full flex items-center justify-center mr-2">
-            <span className="text-white font-bold text-xl italic">V</span>
-          </div>
-          <span className="text-[#E60000] font-bold text-2xl tracking-tighter">VIETTEL</span>
-        </div>
+        <Link to="/" className="flex items-center h-full">
+          <img 
+            src={logoPath} 
+            alt="Viettel Telecom" 
+            className="h-8 md:h-10 w-auto object-contain" 
+            // Nếu bạn dùng logo viettel telecom.png bản dài, hãy chỉnh h-8/h-10 cho phù hợp
+            onError={(e) => {
+              e.target.src = "https://via.placeholder.com/150x50?text=VIETTEL"; // Fallback nếu lỗi ảnh
+            }}
+          />
+        </Link>
 
         <Menu
           mode="horizontal"
