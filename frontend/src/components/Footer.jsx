@@ -5,7 +5,8 @@ import {
   FacebookOutlined,
   YoutubeOutlined,
   LinkedinOutlined,
-} from "@ant-design/icons"
+} from "@ant-design/icons";
+import logoViettel from "../assets/logo/Viettel_Telecom_footer-removebg-preview.png";
 
 const Footer = () => {
   return (
@@ -13,15 +14,22 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 lg:col-span-1">
-            <div className="flex items-center mb-6">
-              <div className="w-8 h-8 bg-[#E60000] rounded-full flex items-center justify-center mr-2">
-                <span className="text-white font-bold text-lg italic">V</span>
-              </div>
-              <span className="text-white font-bold text-xl tracking-tighter">VIETTEL SOLUTION</span>
+            <div className="mb-6 inline-block">
+              <img
+                src={logoViettel}
+                alt="Viettel Solutions"
+                // Thêm bg-white, px-3, py-2, rounded-lg để logo nền trong suốt có chữ đen hiển thị tốt trên nền tối
+                className="h-21 w-auto object-contain px-3 py-2 rounded-lg"
+                onError={(e) => {
+                  e.target.src =
+                    "https://via.placeholder.com/150x50?text=VIETTEL";
+                }}
+              />
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Tổng công ty Giải pháp Doanh nghiệp Viettel (Viettel Solutions) là đơn vị đại diện cho Tập đoàn Công
-              nghiệp - Viễn thông Quân đội làm việc với các khách hàng Chính phủ và Doanh nghiệp.
+              Tổng công ty Giải pháp Doanh nghiệp Viettel (Viettel Solutions) là
+              đơn vị đại diện cho Tập đoàn Công nghiệp - Viễn thông Quân đội làm
+              việc với các khách hàng Chính phủ và Doanh nghiệp.
             </p>
             <div className="flex gap-4">
               <a
@@ -46,7 +54,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Sản phẩm tiêu biểu</h4>
+            <h4 className="text-white font-bold text-lg mb-6">
+              Sản phẩm tiêu biểu
+            </h4>
             <ul className="space-y-4 text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -77,7 +87,9 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-white font-bold text-lg mb-6">Giải pháp ngành</h4>
+            <h4 className="text-white font-bold text-lg mb-6">
+              Giải pháp ngành
+            </h4>
             <ul className="space-y-4 text-gray-400">
               <li>
                 <a href="#" className="hover:text-white transition-colors">
@@ -112,7 +124,9 @@ const Footer = () => {
             <ul className="space-y-4 text-gray-400">
               <li className="flex gap-3">
                 <EnvironmentOutlined className="text-[#E60000] mt-1" />
-                <span>Số 1 Giang Văn Minh, P. Kim Mã, Q. Ba Đình, Hà Nội</span>
+                <span>
+                  Số 210 Đ. Trần Phú, Cái Khế, Ninh Kiều, Cần Thơ
+                </span>
               </li>
               <li className="flex gap-3">
                 <PhoneOutlined className="text-[#E60000] mt-1" />
@@ -127,7 +141,10 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
-          <p>© 2025 Bản quyền thuộc về Tổng công ty Giải pháp Doanh nghiệp Viettel.</p>
+          <p>
+            © 2025 Bản quyền thuộc về Tổng công ty Giải pháp Doanh nghiệp
+            Viettel.
+          </p>
           <div className="flex gap-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white">
               Điều khoản sử dụng
@@ -139,7 +156,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
