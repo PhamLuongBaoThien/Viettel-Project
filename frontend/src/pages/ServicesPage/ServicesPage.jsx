@@ -22,22 +22,52 @@ const dataPlans = [
 
 const simNumbers = [
   { number: '0395089043', price: '50.000đ' }, { number: '0382019581', price: '50.000đ' },
-  { number: '0347103591', price: '50.000đ' }, { number: '0365883437', price: '50.000đ' },
+  { number: '0981234666', price: '150.000đ' }, { number: '0869999123', price: '250.000đ' }, // Số đẹp để test
   { number: '0393545060', price: '50.000đ' }, { number: '0862538416', price: '50.000đ' },
-  { number: '0359739195', price: '50.000đ' }, { number: '0382650304', price: '50.000đ' },
+  { number: '0868888125', price: '50.000đ' }, { number: '0382650304', price: '50.000đ' },
 ];
 
+const simNumbersPostpaid = [
+  { number: '0379606610', price: '60.000đ' }, { number: '0385183486', price: '60.000đ' },
+  { number: '0969232371', price: '60.000đ' }, { number: '0867678617', price: '60.000đ' },
+  { number: '0905555666', price: '200.000đ' }, { number: '0861111123', price: '160.000đ' }, // Số đẹp để test
+  { number: '0977957944', price: '60.000đ' }, { number: '0338811157', price: '60.000đ' },
+];
+
+// Dữ liệu Gói cước kèm SIM - Trả trước (đã có)
 const simPlans = [
-  { id: 'MXH100', name: 'MXH100 - 30 ngày', desc: '1. Chính sách gói cước - 100.000 đồng: Có 30GB (1GB/ngày), miễn phí Tiktok, Youtube, Facebook và nhắn...', price: '100.000đ' },
-  { id: 'V120B', name: 'V120B - 30 ngày', desc: '1. Chính sách gói cước - 120.000 đồng: Có 45GB (1.5GB/ngày), miễn phí 10 phút đầu tiên của tất cả cuộc...', price: '120.000đ' },
+  { id: 'MXH100', name: 'MXH100 - 30 ngày', desc: '1. Chính sách gói cước- 100.000 đồng: Có 30GB (1GB/ngày), miễn phí Tiktok, Youtube, Facebook và nhắn...', price: '100.000đ' },
+  { id: 'V120B', name: 'V120B - 30 ngày', desc: '1. Chính sách gói cước- 120.000 đồng: Có 45GB (1.5GB/ngày), miễn phí 10 phút đầu tiên của tất cả cuộc...', price: '120.000đ' },
   { id: 'MXH120', name: 'MXH120 - 30 ngày', desc: '1. Chính sách gói cước - 120.000 đồng: Có 30GB (1GB/ngày), miễn phí 10 phút đầu tiên của tất cả cuộc gọi...', price: '120.000đ' },
 ];
 
+// THÊM MỚI: Dữ liệu Gói cước kèm SIM - Trả sau (Theo hình image_f5a2c9.png)
+const simPlansPostpaid = [
+  { 
+    id: 'V120K', 
+    name: 'V120K - Tháng', 
+    desc: '1. Chính sách gói cước- 120.000 đ/tháng: Có 1.5GB/ngày, miễn phí 20 phút đầu tiên của tất cả các cuộc gọi...', 
+    price: '120.000đ' 
+  },
+  { 
+    id: 'MXH120_PS', 
+    name: 'MXH120 - Tháng', 
+    desc: '1. Chính sách gói cước- 120.000 đồng/tháng: Có 1GB/ngày, miễn phí 10 phút đầu tiên của tất cả các cuộc gọi...', 
+    price: '120.000đ' 
+  },
+  { 
+    id: 'MXH150', 
+    name: 'MXH150 - Tháng', 
+    desc: '1. Chính sách gói cước- 150.000 đồng/tháng: Có 1.5GB/ngày, miễn phí 10 phút đầu tiên của tất cả các cuộc gọi...', 
+    price: '150.000đ' 
+  },
+];
+
 const gtgtServices = [
-  { id: 'mca', name: 'Thông báo cuộc gọi nhỡ (MCA)', desc: 'MCA là dịch vụ thông báo cuộc gọi nhỡ thông qua bản tin SMS.: Giá...', price: '5.500đ', img: 'https://vietteltelecom.vn/images/mca.jpg' },
-  { id: 'mydio', name: 'MYDIO - SÁCH NÓI CHO MỌI NGƯỜI', desc: 'Dịch vụ nghe sách nói cho mọi người, có bản quyền, uy tín hàng...', price: '10.000đ', img: 'https://vietteltelecom.vn/images/mydio.jpg' },
-  { id: 'mecall', name: 'Dịch vụ Video chờ meCall', desc: '"Dịch vụ Video chờ meCall là dịch vụ cho phép khách hàng cài đặt...', price: 'Miễn phí', img: 'https://vietteltelecom.vn/images/mecall.jpg' },
-  { id: 'imuzik', name: 'Imuzik nhạc chờ', desc: 'Đa sắc màu, sống động', price: '1.000đ', img: 'https://vietteltelecom.vn/images/imuzik.jpg' },
+  { id: 'mca', name: 'Thông báo cuộc gọi nhỡ (MCA)', desc: 'MCA là dịch vụ thông báo cuộc gọi nhỡ thông qua bản tin SMS.: Giá...', price: '5.500đ', img: 'http://media.vietteltelecom.vn/upload/ArticleService/e9/fb/be/e051adfeb7a48e5002a0c671b316e778ec558c81.jpg' },
+  { id: 'mydio', name: 'MYDIO - SÁCH NÓI CHO MỌI NGƯỜI', desc: 'Dịch vụ nghe sách nói cho mọi người, có bản quyền, uy tín hàng...', price: '10.000đ', img: 'http://media.vietteltelecom.vn/upload/ArticleService/0a/d3/30/bc0438824dade6ac9a3a498e099db42a0b69f2f7.png' },
+  { id: 'mecall', name: 'Dịch vụ Video chờ meCall', desc: '"Dịch vụ Video chờ meCall là dịch vụ cho phép khách hàng cài đặt...', price: 'Miễn phí', img: 'http://media.vietteltelecom.vn/upload/ArticleService/39/4e/e3/fe43bf773bca8eaf2c18918af1c9ebb04fe56f48.jpg' },
+  { id: 'imuzik', name: 'Imuzik nhạc chờ', desc: 'Đa sắc màu, sống động', price: '1.000đ', img: 'http://media.vietteltelecom.vn/upload/ArticleService/8d/73/38/bf7e7eac7a9343447757003fcc06ed570bbe1a15.jpg' },
 ];
 
 const intlServices = [
@@ -77,8 +107,40 @@ const dataPlansRoaming = [
 
 const ServicesPage = () => {
 const [activeTab, setActiveTab] = useState('Gói cước 4G/5G');
-  const tabs = ['Gói cước 4G/5G', 'Gói cước 5G', 'Gói cước Hot', 'Gói cước Dcom', 'Gói Roaming'];
+  const [simTab, setSimTab] = useState('Trả trước');
   
+  // 1. Thêm biến theo dõi nội dung ô tìm kiếm
+  const [searchQuery, setSearchQuery] = useState(''); 
+  
+  const displaySimNumbers = simTab === 'Trả trước' ? simNumbers : simNumbersPostpaid;
+
+  // 2. Hàm lọc danh sách SIM thông minh
+  const filteredSimNumbers = displaySimNumbers.filter(item => {
+    if (!searchQuery) return true; // Nếu ô tìm kiếm trống -> Hiện tất cả
+    
+    let query = searchQuery.trim().toLowerCase();
+    
+    // Nếu nội dung tìm kiếm có chứa ký tự đặc biệt '*' hoặc 'x' (vd: 09*, *666, 086*12x)
+    if (query.includes('*') || query.includes('x')) {
+      // Biến đổi Hotkey thành quy tắc Regex:
+      // - Dấu '*' -> '.*' (đại diện cho một cụm số bất kỳ)
+      // - Chữ 'x' -> '\d' (đại diện cho 1 chữ số bất kỳ từ 0-9)
+      let regexStr = '^' + query.replace(/\*/g, '.*').replace(/x/g, '\\d') + '$';
+      
+      try {
+          const regex = new RegExp(regexStr);
+          return regex.test(item.number);
+      } catch {
+        return item.number.includes(query); // Fallback an toàn
+    }
+    }
+    
+    // Nếu người dùng tự gõ số bình thường (vd: 039) -> Tìm theo kiểu chứa từ khóa
+    return item.number.includes(query);
+  });
+  const tabs = ['Gói cước 4G/5G', 'Gói cước 5G', 'Gói cước Hot', 'Gói cước Dcom', 'Gói Roaming'];
+  const [simPlanTab, setSimPlanTab] = useState('Trả trước');
+  const displaySimPlans = simPlanTab === 'Trả trước' ? simPlans : simPlansPostpaid;
   // Xác định dữ liệu dựa trên tab đang chọn
   let displayPlans = dataPlans;
   if (activeTab === 'Gói cước 5G') displayPlans = dataPlans5G;
@@ -291,41 +353,102 @@ const [activeTab, setActiveTab] = useState('Gói cước 4G/5G');
             <div className="flex justify-between items-center mb-4 border-b pb-3">
               <div className="flex items-center gap-4">
                  <h3 className="text-lg font-bold text-gray-800">Mua sim số</h3>
+                 
+                 {/* Khung chứa 2 nút Trả trước / Trả sau */}
                  <div className="flex bg-gray-100 rounded-md p-0.5">
-                   <button className="px-3 py-1 bg-white text-[#ee0033] font-medium text-sm rounded shadow-sm border border-[#ee0033]">Trả trước</button>
-                   <button className="px-3 py-1 text-gray-500 font-medium text-sm hover:text-gray-800">Trả sau</button>
+                   <button 
+                     onClick={() => setSimTab('Trả trước')}
+                     className={`px-3 py-1 font-medium text-sm rounded shadow-sm border transition-colors ${
+                       simTab === 'Trả trước' ? 'bg-white text-[#ee0033] border-[#ee0033]' : 'text-gray-500 border-transparent hover:text-gray-800'
+                     }`}
+                   >
+                     Trả trước
+                   </button>
+                   <button 
+                     onClick={() => setSimTab('Trả sau')}
+                     className={`px-3 py-1 font-medium text-sm rounded shadow-sm border transition-colors ${
+                       simTab === 'Trả sau' ? 'bg-white text-[#ee0033] border-[#ee0033]' : 'text-gray-500 border-transparent hover:text-gray-800'
+                     }`}
+                   >
+                     Trả sau
+                   </button>
                  </div>
               </div>
-              <span className="text-[#ee0033] font-medium cursor-pointer text-sm">Xem tất cả &gt;</span>
+              <span className="text-[#ee0033] font-medium cursor-pointer text-sm hover:underline">Xem tất cả &gt;</span>
             </div>
 
+            {/* DÒNG CHỮ ĐIỀU KIỆN (Chỉ hiện khi chọn Trả sau) */}
+            {simTab === 'Trả sau' && (
+              <p className="text-gray-700 text-sm mb-4 font-medium">
+                Thời gian cam kết sử dụng đối với thuê bao trả sau: 12 tháng
+              </p>
+            )}
+
             {/* Search & Hotkeys */}
-            <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 mb-2">
+              {/* Ô Input Tìm Kiếm (Chiếm 50% trên máy tính) - Thêm !rounded-lg !rounded-bl-none */}
               <Input 
                 placeholder="Tìm kiếm" 
                 prefix={<SearchOutlined className="text-gray-400" />} 
-                className="md:max-w-md rounded-md"
+                className="w-full lg:w-1/2 !rounded-lg !rounded-bl-none"
                 size="large"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                allowClear
               />
-              <div className="flex items-center gap-2 flex-wrap text-sm">
-                <span className="text-gray-500">Hot key:</span>
+              
+              {/* Danh sách Hotkey - Bỏ border, chỉ để chữ */}
+              <div className="flex items-center gap-3 flex-wrap text-[15px] w-full lg:w-1/2 lg:pl-4">
+                <span className="text-gray-900 font-bold">Hot key:</span>
                 {['09*', '03*', '08*', '086*', '*666', '086*123', '086*12x'].map(k => (
-                  <span key={k} className="cursor-pointer hover:text-[#ee0033]">{k}</span>
+                  <span 
+                    key={k} 
+                    onClick={() => setSearchQuery(k === searchQuery ? '' : k)}
+                    className={`cursor-pointer font-medium transition-colors ${
+                      searchQuery === k 
+                        ? 'text-[#ee0033]' // Đỏ khi được chọn
+                        : 'text-gray-600 hover:text-[#ee0033]' // Xám khi chưa chọn
+                    }`}
+                  >
+                    {k}
+                  </span>
                 ))}
               </div>
             </div>
 
-            {/* Numbers Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-              {simNumbers.map((item, idx) => (
-                <div key={idx} className="flex justify-between items-center border border-gray-200 rounded-md p-3 hover:border-[#ee0033] hover:shadow-sm transition-all bg-gray-50/50">
-                  <span className="font-bold text-gray-800 tracking-wider">{item.number}</span>
-                  <div className="flex items-center gap-3">
-                    <span className="text-gray-500 text-sm">{item.price}</span>
-                    <button className="border border-gray-800 text-gray-800 text-xs font-semibold px-2 py-1 rounded hover:bg-gray-800 hover:text-white transition-colors">Chọn ngay</button>
+            {/* Text hiển thị số lượng kết quả (như hình) */}
+            <div className="text-sm text-gray-800 font-medium mb-4">
+              Khoảng {filteredSimNumbers.length} kết quả
+            </div>
+
+           {/* Numbers Grid - Bố cục 2 cột (2x4) */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-3 mb-6 min-h-[150px]">
+              {filteredSimNumbers.length > 0 ? (
+                filteredSimNumbers.map((item, idx) => (
+                  <div key={idx} className="flex justify-between items-center border border-gray-200 rounded-lg rounded-bl-none p-2 hover:border-[#ee0033] hover:shadow-sm transition-all bg-gray-50/40">
+                    
+                    {/* Dòng ghi chú đã được dời an toàn vào trong div */}
+                    <span className="font-bold text-gray-900 tracking-wider text-[15px] ml-2">{item.number}</span>
+                    
+                    <div className="flex items-center gap-8 md:gap-12">
+                      <span className="text-gray-900 text-[15px] font-medium">{item.price}</span>
+                      <button className="border border-gray-800 text-gray-800 text-[13px] font-bold px-4 py-1.5 rounded-lg rounded-bl-none hover:bg-red-600 hover:text-white transition-colors">
+                        Chọn ngay
+                      </button>
+                    </div>
+
                   </div>
+                ))
+              ) : (
+                <div className="col-span-1 lg:col-span-2 flex flex-col items-center justify-center py-10 bg-gray-50 rounded-lg border border-dashed border-gray-300">
+                  <p className="text-gray-500 font-medium mb-2">
+                    Không tìm thấy số thuê bao nào phù hợp với từ khóa <span className="font-bold text-gray-800">"{searchQuery}"</span>
+                  </p>
+                  <button onClick={() => setSearchQuery('')} className="text-[#ee0033] font-bold hover:underline flex items-center gap-1">
+                    Xóa bộ lọc để xem tất cả
+                  </button>
                 </div>
-              ))}
+              )}
             </div>
             
             <div className="flex justify-center">
@@ -333,44 +456,79 @@ const [activeTab, setActiveTab] = useState('Gói cước 4G/5G');
             </div>
           </div>
 
-          {/* Gói cước kèm SIM */}
+          {/* Gói cước kèm Sim */}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
             <div className="flex justify-between items-center mb-6 border-b pb-3">
               <div className="flex items-center gap-4">
                  <h3 className="text-lg font-bold text-gray-800">Gói cước kèm Sim</h3>
+                 
+                 {/* Tab chuyển đổi Trả trước / Trả sau */}
                  <div className="flex bg-gray-100 rounded-md p-0.5">
-                   <button className="px-3 py-1 bg-white text-[#ee0033] font-medium text-sm rounded shadow-sm border border-[#ee0033]">Trả trước</button>
-                   <button className="px-3 py-1 text-gray-500 font-medium text-sm hover:text-gray-800">Trả sau</button>
+                   <button 
+                     onClick={() => setSimPlanTab('Trả trước')}
+                     className={`px-3 py-1 font-medium text-sm rounded shadow-sm border transition-colors ${
+                       simPlanTab === 'Trả trước' ? 'bg-white text-[#ee0033] border-[#ee0033]' : 'text-gray-500 border-transparent hover:text-gray-800'
+                     }`}
+                   >
+                     Trả trước
+                   </button>
+                   <button 
+                     onClick={() => setSimPlanTab('Trả sau')}
+                     className={`px-3 py-1 font-medium text-sm rounded shadow-sm border transition-colors ${
+                       simPlanTab === 'Trả sau' ? 'bg-white text-[#ee0033] border-[#ee0033]' : 'text-gray-500 border-transparent hover:text-gray-800'
+                     }`}
+                   >
+                     Trả sau
+                   </button>
                  </div>
               </div>
-              <span className="text-[#ee0033] font-medium cursor-pointer text-sm">Xem tất cả &gt;</span>
+              <span className="text-[#ee0033] font-medium cursor-pointer text-sm hover:underline">Xem tất cả &gt;</span>
             </div>
 
+            {/* Danh sách gói cước kèm SIM */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 relative">
-              {simPlans.map((plan, idx) => (
-                <div key={idx} className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
-                  <div className="bg-[#ee0033] text-white p-4">
-                    <h4 className="font-bold text-xl">{plan.name}</h4>
+              {displaySimPlans.map((plan, idx) => (
+                <div key={idx} className="border border-gray-200 rounded-3xl rounded-bl-none overflow-hidden hover:shadow-md transition-all">
+                  <div className="bg-[#ee0033] text-white px-5 py-4 font-bold text-xl relative overflow-hidden">
+                    {plan.name}
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 opacity-20 text-5xl transform rotate-12 translate-x-3">
+                       <MobileOutlined />
+                    </div>
                   </div>
-                  <div className="p-4 flex flex-col h-[200px]">
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">{plan.desc}</p>
-                    <div className="text-xl font-bold text-gray-900 mt-auto mb-4">{plan.price}</div>
-                    <div className="flex gap-2">
-                      <Button type="default" className="flex-1 font-semibold hover:!border-[#ee0033] hover:!text-[#ee0033]">Đăng ký</Button>
-                      <Button type="text" className="text-gray-600 hover:!text-[#ee0033] font-medium text-sm px-2">Xem chi tiết &gt;</Button>
+                  
+                  <div className="flex flex-col h-full">
+                    {/* Vùng mô tả xám nhạt */}
+                    <div className="bg-[#f4f6f8] px-5 py-4 m-2 rounded-lg min-h-[100px] flex items-center">
+                      <p className="text-gray-700 text-[14px] leading-relaxed line-clamp-3 font-medium">
+                        {plan.desc}
+                      </p>
+                    </div>
+                    
+                    <div className="p-5 pt-2">
+                      <div className="text-2xl font-extrabold text-gray-900 mb-6">{plan.price}</div>
+                      <div className="flex items-center justify-between gap-4">
+                        <button className="flex-1 font-bold text-gray-800 border border-gray-300 py-2.5 rounded-xl rounded-bl-none hover:bg-gray-50 hover:text-[#ee0033] hover:border-[#ee0033] transition-colors bg-white">
+                          Đăng ký
+                        </button>
+                        <span className="text-[#ee0033] font-bold cursor-pointer text-sm whitespace-nowrap hover:underline flex items-center gap-1">
+                          Xem chi tiết <RightOutlined className="text-xs" />
+                        </span>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4">
-               <button className="flex items-center justify-center gap-2 border border-gray-300 rounded-md px-8 py-3 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#ee0033] transition-colors bg-gray-50/50">
-                  <MobileOutlined className="text-[#ee0033]" /> Chuyển sang trả sau &gt;
+            {/* Hai nút chức năng dưới cùng */}
+            <div className="flex flex-col sm:flex-row justify-center gap-4 border-t pt-8">
+               <button className="flex items-center justify-center gap-2 border border-gray-300 rounded-xl rounded-bl-none px-10 py-4 font-bold text-gray-800 hover:bg-gray-50 hover:text-[#ee0033] hover:border-[#ee0033] transition-all bg-white shadow-sm">
+                  <IdcardOutlined className="text-[#ee0033] text-xl" />
+                  Chuyển sang trả sau &gt;
                </button>
-               <button className="flex items-center justify-center gap-2 border border-gray-300 rounded-md px-8 py-3 font-semibold text-gray-700 hover:bg-gray-50 hover:text-[#ee0033] transition-colors bg-gray-50/50">
-                  <IdcardOutlined className="text-[#ee0033]" /> Chuyển mạng giữ số &gt;
+               <button className="flex items-center justify-center gap-2 border border-gray-300 rounded-xl rounded-bl-none px-10 py-4 font-bold text-gray-800 hover:bg-gray-50 hover:text-[#ee0033] hover:border-[#ee0033] transition-all bg-white shadow-sm">
+                  <IdcardOutlined className="text-[#ee0033] text-xl" />
+                  Chuyển mạng giữ số &gt;
                </button>
             </div>
           </div>
