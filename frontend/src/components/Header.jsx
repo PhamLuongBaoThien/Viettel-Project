@@ -54,6 +54,7 @@ const Header = () => {
             icon={<UserOutlined className="text-[18px]" />}
             className="text-gray-700 hover:text-[#E60000]! flex items-center justify-center w-10 h-10 rounded-full"
           />
+          
         </Dropdown>
         <div className="hidden md:block w-px h-5 bg-gray-300 mx-1"></div>
 
