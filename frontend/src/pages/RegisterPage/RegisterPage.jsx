@@ -19,9 +19,7 @@ const RegisterPage = () => {
       >
         {/* Logo */}
         <div className="flex flex-col items-center mb-6">
-          <div className="w-14 h-14 bg-[#E60000] rounded-full flex items-center justify-center mb-2">
-            <span className="text-white font-bold text-2xl italic">V</span>
-          </div>
+         
           <Title level={3} className="!text-[#E60000] !mb-0">
             Đăng ký tài khoản
           </Title>
