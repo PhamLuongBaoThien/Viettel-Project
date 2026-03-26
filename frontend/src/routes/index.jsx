@@ -4,6 +4,9 @@ import MainLayout from "../layouts/MainLayout";
 import HomePage from "../pages/HomePage/HomePage";
 import ServicesPage from "../pages/ServicesPage/ServicesPage";
 import SolutionPage from "../pages/SolutionPage/SolutionPage";
+import LoginPage from "../pages/LoginPage/LoginPage";
+import RegisterPage from "../pages/RegisterPage/RegisterPage";
+import ContactPage from "../pages/ContactPage/ContactPage";
 
 // ... import các trang khác
 
@@ -24,6 +27,18 @@ const router = createBrowserRouter([
         path: "/solutions", // Khi người dùng vào link /solutions thì hiện trang này
         element: <SolutionPage />, 
       },
+      {
+        path: "/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/register",
+        element: <RegisterPage />,
+      },
+      {
+        path: "/contact",
+        element: <ContactPage />,
+      }
       // Sau này bạn thêm trang mới rất dễ:
       // {
       //   path: "products",

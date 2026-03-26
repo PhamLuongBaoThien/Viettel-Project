@@ -1,0 +1,138 @@
+/* nền trang */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #e60000, #ff4d4f);
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* khung login */
+.login-box {
+  width: 380px;
+  background: #ffffff;
+  padding: 40px 35px;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  animation: fadeIn 0.6s ease;
+}
+
+/* logo */
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 140px;
+}
+
+/* tiêu đề */
+.login-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* input group */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+/* input */
+.input-group input {
+  width: 100%;
+  padding: 10px 8px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+/* label */
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #999;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* hiệu ứng focus */
+.input-group input:focus {
+  border-bottom: 2px solid #e60000;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -10px;
+  font-size: 12px;
+  color: #e60000;
+}
+
+/* icon show password */
+.show-pass {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* nút đăng nhập */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #e60000;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #c40000;
+  transform: translateY(-2px);
+}
+
+/* quên mật khẩu */
+.extra {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.extra a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #e60000;
+}
+
+.extra a:hover {
+  text-decoration: underline;
+}
+
+/* animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+@media (max-width: 500px) {
+  .login-box {
+    width: 90%;
+    padding: 30px;
+  }
+}

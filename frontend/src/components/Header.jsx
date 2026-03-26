@@ -13,7 +13,7 @@ const Header = () => {
     { key: "/", label: <Link to="/">Trang chủ</Link> },
     { key: "/solutions", label: <Link to="/solutions">Giải pháp</Link> },
     { key: "/dich-vu", label: <Link to="/dich-vu">Dịch vụ</Link> },
-    { key: "/contact", label: "Liên hệ" }, // Nếu contact có trang riêng, hãy đổi thành "/contact"
+    { key: "/contact", label: <Link to="/contact">Liên hệ</Link> }, // Nếu contact có trang riêng, hãy đổi thành "/contact"
   ];
 
     // Menu thả xuống cho icon User
